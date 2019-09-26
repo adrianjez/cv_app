@@ -1,5 +1,38 @@
 {
 	"title" : "Adrian Jeż",
 	"about" : "Pasionate developer",
-	"photo_url" : "https://homepages.cae.wisc.edu/~ece533/images/arctichare.png"
+	"photo_url" : "https://github.com/adrianjez/cv_app/raw/master/IMG_0096.jpg",
+	"work_history" : [
+		{
+			"title" : "Education",
+			"details" : [
+				{
+					"title" : "Czestochowa University of Technology",
+					"subtitle" : "2019-2020",
+					"details" : "A lot of details about my work"
+				},
+				{
+					"title" : "Czestochowa University of Technology",
+					"subtitle" : "2019-2020",
+					"details" : "A lot of details about my work"
+				}
+			]
+		}, {
+			"title" : "Professional Experience",
+			"details" : [
+				{
+					"title" : "Android Developer",
+					"subtitle" : "2019-2020",
+					"details" : "A lot of details about my work"
+				},
+				{
+					"title" : "Android Developer",
+					"subtitle" : "2019-2020",
+					"details" : "A lot of details about my work"
+				}
+			]
+		}
+	]
 }
+
+
