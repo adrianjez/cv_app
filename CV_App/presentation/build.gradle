@@ -1,0 +1,90 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    def globalConfiguration = rootProject.extensions.getByName("ext")
+    compileSdkVersion globalConfiguration["androidCompileSdkVersion"]
+    defaultConfig {
+        minSdkVersion globalConfiguration["androidMinSdkVersion"]
+        targetSdkVersion globalConfiguration["androidTargetSdkVersion"]
+
+        applicationId globalConfiguration["androidApplicationId"]
+        versionCode globalConfiguration["androidVersionCode"]
+        versionName globalConfiguration["androidVersionName"]
+        testInstrumentationRunner globalConfiguration["testInstrumentationRunner"]
+        testApplicationId globalConfiguration["testApplicationId"]
+    }
+
+    signingConfigs {
+        releaseConfig {
+            keyAlias 'daznTestApp'
+            keyPassword 'dazn1234'
+            storeFile file('../AppKeystore')
+            storePassword 'dazn1234'
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.releaseConfig
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+    defaultConfig {
+        vectorDrawables.useSupportLibrary = true
+    }
+}
+
+dependencies {
+    def presentationDependencies = rootProject.ext.presentationDependencies
+    def presentationTestDependencies = rootProject.ext.presentationTestDependencies
+    implementation project(':domain')
+    implementation project(':data')
+
+    kapt presentationDependencies.daggerCompiler
+    kapt presentationDependencies.androidProcessor
+
+    implementation presentationDependencies.rxJava
+    implementation presentationDependencies.rxAndroid
+    implementation presentationDependencies.stdLib
+    implementation presentationDependencies.dagger
+    implementation presentationDependencies.daggerAndroidSupport
+    implementation presentationDependencies.lifecycleExtensions
+    implementation presentationDependencies.appCompat
+    implementation presentationDependencies.retrofit
+    implementation presentationDependencies.adapterRXJava2
+    implementation presentationDependencies.converterGSON
+    implementation presentationDependencies.loggingInterceptor
+    implementation presentationDependencies.picasso
+    implementation presentationDependencies.androidSegmented
+    implementation presentationDependencies.constraintLayout
+    implementation presentationDependencies.androidMaterial
+    implementation presentationDependencies.roundedImageView
+    implementation presentationDependencies.timber
+
+    androidTestImplementation presentationTestDependencies.coreLibrary
+    androidTestImplementation presentationTestDependencies.runner
+    androidTestImplementation presentationTestDependencies.rules
+    androidTestImplementation presentationTestDependencies.truth
+    androidTestImplementation presentationTestDependencies.espressoCore
+    androidTestImplementation presentationTestDependencies.espressoContrib
+    androidTestImplementation presentationTestDependencies.espressoIntents
+    androidTestImplementation presentationTestDependencies.espressoAccessibility
+    androidTestImplementation presentationTestDependencies.jUnitExt
+}
+
+
+android.applicationVariants.all { variant ->
+
+    variant.outputs.all { output ->
+        def formattedDate = new Date().format('yy_MM_dd')
+        def fileName = "SongApp" + "_V" + versionCode + "_" + formattedDate + "_" + "-${variant.versionName}.apk"
+        outputFileName = new File("folder_with_apk_build", fileName)
+    }
+}

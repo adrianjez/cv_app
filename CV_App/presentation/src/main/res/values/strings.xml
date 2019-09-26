@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">DAZNTestApp</string>
+    <string name="please_wait">Please wait</string>
+
+    <string name="menu_title_events">Events</string>
+    <string name="menu_title_schedule">Schedule</string>
+</resources>

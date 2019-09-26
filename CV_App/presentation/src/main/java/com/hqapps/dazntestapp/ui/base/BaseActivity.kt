@@ -1,0 +1,5 @@
+package com.hqapps.dazntestapp.ui.base
+
+import dagger.android.support.DaggerAppCompatActivity
+
+abstract class BaseActivity: DaggerAppCompatActivity()
