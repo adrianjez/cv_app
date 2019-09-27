@@ -32,7 +32,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
-                    android:id="@+id/textView6"
+                    android:id="@+id/titleContainer"
                     android:layout_width="213dp"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-black"
@@ -48,9 +48,9 @@
                     android:layout_height="2dp"
                     android:layout_marginTop="50dp"
                     android:background="#1AAC7A"
-                    app:layout_constraintEnd_toEndOf="@+id/textView6"
+                    app:layout_constraintEnd_toEndOf="@+id/titleContainer"
                     app:layout_constraintStart_toStartOf="@+id/end_guidline"
-                    app:layout_constraintTop_toTopOf="@+id/textView6" />
+                    app:layout_constraintTop_toTopOf="@+id/titleContainer" />
 
                 <TextView
                     android:id="@+id/textView2"

@@ -1,8 +1,8 @@
-package com.hqapps.dazntestapp.ui.main.curriculumvitaedetails
+package com.hqapps.cvapp.ui.main.curriculumvitaedetails
 
-import com.hqapps.dazntestapp.R
-import com.hqapps.dazntestapp.databinding.FragmentCurriculumVitaeDetailsBinding
-import com.hqapps.dazntestapp.ui.base.BaseFragment
+import com.hqapps.cvapp.R
+import com.hqapps.cvapp.databinding.FragmentCurriculumVitaeDetailsBinding
+import com.hqapps.cvapp.ui.base.BaseFragment
 
 class CurriculumVitaeDetailsFragment :
     BaseFragment<CurriculumVitaeView, CurriculumVitaeViewModel, FragmentCurriculumVitaeDetailsBinding>(

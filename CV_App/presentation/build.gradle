@@ -84,7 +84,7 @@ android.applicationVariants.all { variant ->
 
     variant.outputs.all { output ->
         def formattedDate = new Date().format('yy_MM_dd')
-        def fileName = "SongApp" + "_V" + versionCode + "_" + formattedDate + "_" + "-${variant.versionName}.apk"
+        def fileName = "CVApp" + "_V" + versionCode + "_" + formattedDate + "_" + "-${variant.versionName}.apk"
         outputFileName = new File("folder_with_apk_build", fileName)
     }
 }

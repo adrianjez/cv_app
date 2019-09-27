@@ -1,4 +1,4 @@
-package com.hqapps.dazntestapp.ui.base
+package com.hqapps.cvapp.ui.base
 
 import dagger.android.support.DaggerAppCompatActivity
 

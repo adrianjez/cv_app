@@ -1,4 +1,4 @@
-package com.hqapps.dazntestapp.ui.base
+package com.hqapps.cvapp.ui.base
 
 import android.text.SpannableString
 import android.widget.ImageView

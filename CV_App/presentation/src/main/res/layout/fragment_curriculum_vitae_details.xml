@@ -5,7 +5,7 @@
 
         <variable
             name="viewModel"
-            type="com.hqapps.dazntestapp.ui.main.curriculumvitaedetails.CurriculumVitaeViewModel"/>
+            type="com.hqapps.cvapp.ui.main.curriculumvitaedetails.CurriculumVitaeViewModel"/>
 
         <import type="android.view.View"/>
     </data>

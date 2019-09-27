@@ -1,9 +1,9 @@
-package com.hqapps.dazntestapp.app
+package com.hqapps.cvapp.app
 
 import android.app.Application
 import android.content.Context
-import com.hqapps.dazntestapp.DaznApplication
-import com.hqapps.dazntestapp.ui.UiModule
+import com.hqapps.cvapp.CVApplication
+import com.hqapps.cvapp.ui.UiModule
 import dagger.Binds
 import dagger.Module
 import dagger.android.support.AndroidSupportInjectionModule
@@ -15,10 +15,10 @@ import dagger.android.support.AndroidSupportInjectionModule
 abstract class AppModule {
 
     @Binds
-    internal abstract fun application(app: DaznApplication): Application
+    internal abstract fun application(app: CVApplication): Application
 
     @Binds
-    internal abstract fun applicationContext(app: DaznApplication): Context
+    internal abstract fun applicationContext(app: CVApplication): Context
 
 
 }

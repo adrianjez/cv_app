@@ -1,4 +1,4 @@
-package com.hqapps.dazntestapp.ui.base
+package com.hqapps.cvapp.ui.base
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,8 +8,8 @@ import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
-import com.hqapps.dazntestapp.BR
-import com.hqapps.dazntestapp.ui.main.MainActivity
+import com.hqapps.cvapp.BR
+import com.hqapps.cvapp.ui.main.MainActivity
 import dagger.android.support.DaggerFragment
 import timber.log.Timber
 import javax.inject.Inject

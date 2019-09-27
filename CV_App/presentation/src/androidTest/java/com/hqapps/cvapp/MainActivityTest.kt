@@ -1,4 +1,4 @@
-package com.hqapps.dazntestapp
+package com.hqapps.cvapp
 
 import android.content.Intent
 import androidx.fragment.app.Fragment
@@ -9,9 +9,9 @@ import androidx.test.espresso.matcher.ViewMatchers
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.filters.LargeTest
 import androidx.test.rule.ActivityTestRule
-import com.hqapps.dazntestapp.ui.main.MainActivity
-import com.hqapps.dazntestapp.ui.main.events.EventsFragment
-import com.hqapps.dazntestapp.ui.main.schedule.ScheduleFragment
+import com.hqapps.cvapp.ui.main.MainActivity
+import com.hqapps.cvapp.ui.main.events.EventsFragment
+import com.hqapps.cvapp.ui.main.schedule.ScheduleFragment
 import org.hamcrest.CoreMatchers
 import org.hamcrest.MatcherAssert
 import org.junit.Before

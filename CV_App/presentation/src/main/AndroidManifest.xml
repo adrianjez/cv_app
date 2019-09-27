@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.hqapps.dazntestapp">
+          package="com.hqapps.cvapp">
 
     <!--Permissions-->
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
-            android:name=".DaznApplication"
+            android:name="com.hqapps.cvapp.CVApplication"
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
             android:label="@string/app_name"
@@ -16,7 +16,7 @@
             android:theme="@style/AppTheme">
 
         <!-- Activities -->
-        <activity android:name=".ui.main.MainActivity">
+        <activity android:name="com.hqapps.cvapp.ui.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <action android:name="android.intent.action.VIEW"/>

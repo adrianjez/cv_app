@@ -2,10 +2,10 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/card"
@@ -30,7 +30,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
-                    android:id="@+id/textView6"
+                    android:id="@+id/titleContainer"
                     android:layout_width="213dp"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-black"
@@ -45,56 +45,13 @@
                     android:layout_width="0dp"
                     android:layout_height="2dp"
                     android:layout_marginTop="50dp"
+                    android:layout_marginBottom="10dp"
                     android:background="#1AAC7A"
-                    app:layout_constraintEnd_toEndOf="@+id/textView6"
-                    app:layout_constraintStart_toStartOf="@+id/end_guidline"
-                    app:layout_constraintTop_toTopOf="@+id/textView6" />
-
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="30dp"
-                    android:fontFamily="sans-serif-black"
-                    android:text="Age"
-                    android:textColor="#000"
-                    app:layout_constraintStart_toStartOf="@+id/end_guidline"
-                    app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-                <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="sans-serif-black"
-                    android:text="Address"
-                    android:textColor="#000"
-                    app:layout_constraintStart_toStartOf="@+id/end_guidline"
-                    app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-                <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="sans-serif-black"
-                    android:text="Email"
-                    android:textColor="#000"
-                    app:layout_constraintStart_toStartOf="@+id/end_guidline"
-                    app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
-
-                <TextView
-                    android:id="@+id/textView5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="sans-serif-black"
-                    android:text="Phone"
-                    android:textColor="#000"
                     app:layout_constraintBottom_toTopOf="@+id/bottom_guidline"
+                    app:layout_constraintEnd_toEndOf="@+id/titleContainer"
                     app:layout_constraintStart_toStartOf="@+id/end_guidline"
-                    app:layout_constraintTop_toBottomOf="@+id/textView4" />
+                    app:layout_constraintTop_toTopOf="@+id/titleContainer" />
+
 
                 <androidx.constraintlayout.widget.Guideline
                     android:id="@+id/top_guidline"
@@ -131,16 +88,6 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     app:layout_constraintGuide_percent="0.9" />
-
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="TextView"
-                    app:layout_constraintEnd_toStartOf="@+id/start_guidline"
-                    app:layout_constraintStart_toStartOf="@+id/end_guidline"
-                    app:layout_constraintTop_toBottomOf="@+id/view" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

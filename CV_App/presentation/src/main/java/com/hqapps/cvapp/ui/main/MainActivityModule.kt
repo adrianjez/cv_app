@@ -1,4 +1,4 @@
-package com.hqapps.dazntestapp.ui.main
+package com.hqapps.cvapp.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import dagger.Binds

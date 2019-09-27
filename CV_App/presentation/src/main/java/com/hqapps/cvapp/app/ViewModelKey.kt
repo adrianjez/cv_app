@@ -1,4 +1,4 @@
-package com.hqapps.dazntestapp.app
+package com.hqapps.cvapp.app
 
 import androidx.lifecycle.ViewModel
 import dagger.MapKey

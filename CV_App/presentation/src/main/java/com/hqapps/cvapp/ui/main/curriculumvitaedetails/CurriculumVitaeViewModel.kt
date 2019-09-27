@@ -1,9 +1,9 @@
-package com.hqapps.dazntestapp.ui.main.curriculumvitaedetails
+package com.hqapps.cvapp.ui.main.curriculumvitaedetails
 
 import android.util.Log
 import androidx.databinding.ObservableField
-import com.hqapps.dazntestapp.ui.base.BaseView
-import com.hqapps.dazntestapp.ui.base.BaseViewModel
+import com.hqapps.cvapp.ui.base.BaseView
+import com.hqapps.cvapp.ui.base.BaseViewModel
 import com.hqapps.domain.interactor.LoadCurriculumVitaeUseCase
 import com.hqapps.domain.model.CurriculumVitaeEntity
 import io.reactivex.android.schedulers.AndroidSchedulers

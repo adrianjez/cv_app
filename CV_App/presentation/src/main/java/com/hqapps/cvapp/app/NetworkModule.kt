@@ -1,4 +1,4 @@
-package com.hqapps.dazntestapp.app
+package com.hqapps.cvapp.app
 
 import dagger.Module
 import dagger.Provides

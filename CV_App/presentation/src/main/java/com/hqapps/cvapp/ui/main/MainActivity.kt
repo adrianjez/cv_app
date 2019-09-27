@@ -1,10 +1,10 @@
-package com.hqapps.dazntestapp.ui.main
+package com.hqapps.cvapp.ui.main
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import com.hqapps.dazntestapp.R
-import com.hqapps.dazntestapp.ui.base.BaseActivity
-import com.hqapps.dazntestapp.ui.main.curriculumvitaedetails.CurriculumVitaeDetailsFragment
+import com.hqapps.cvapp.R
+import com.hqapps.cvapp.ui.base.BaseActivity
+import com.hqapps.cvapp.ui.main.curriculumvitaedetails.CurriculumVitaeDetailsFragment
 
 
 class MainActivity : BaseActivity() {

@@ -1,4 +1,4 @@
-package com.hqapps.dazntestapp.ui.decorators
+package com.hqapps.cvapp.ui.decorators
 
 import android.content.Context
 import android.graphics.Canvas

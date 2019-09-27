@@ -1,7 +1,7 @@
-package com.hqapps.dazntestapp.ui.main.curriculumvitaedetails
+package com.hqapps.cvapp.ui.main.curriculumvitaedetails
 
 import androidx.lifecycle.ViewModel
-import com.hqapps.dazntestapp.app.ViewModelKey
+import com.hqapps.cvapp.app.ViewModelKey
 import com.hqapps.domain.interactor.LoadCurriculumVitaeUseCase
 import dagger.Module
 import dagger.Provides

@@ -1,11 +1,11 @@
-package com.hqapps.dazntestapp.ui
+package com.hqapps.cvapp.ui
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.hqapps.dazntestapp.app.AppViewModelFactory
-import com.hqapps.dazntestapp.ui.main.MainActivity
-import com.hqapps.dazntestapp.ui.main.MainActivityModule
-import com.hqapps.dazntestapp.ui.main.curriculumvitaedetails.CurriculumVitaeDetailsModule
+import com.hqapps.cvapp.app.AppViewModelFactory
+import com.hqapps.cvapp.ui.main.MainActivity
+import com.hqapps.cvapp.ui.main.MainActivityModule
+import com.hqapps.cvapp.ui.main.curriculumvitaedetails.CurriculumVitaeDetailsModule
 import dagger.Module
 import dagger.Provides
 import dagger.android.ContributesAndroidInjector
