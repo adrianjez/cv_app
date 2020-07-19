@@ -19,14 +19,14 @@
       "title": "Education",
       "details": [
         {
-          "title": "Czestochowa University of Technology",
-          "subtitle": "2019-2020",
-          "details": "A lot of details about my work"
+          "title": "University of Technology, Częstochowa",
+          "subtitle": "2016-2017",
+          "details": "Topic of master thesis: Tailoring and customizations of Android OS Specialization: Business applications and databases"
         },
         {
           "title": "Czestochowa University of Technology",
-          "subtitle": "2019-2020",
-          "details": "A lot of details about my work"
+          "subtitle": "2012-2016",
+          "details": "Topic of engineer thesis: Construction of application user interface for Android based on fragments mechanism \nSecialization: Programming of Internet Applications \nGraduate of speciality ordered by the polish Government"
         }
       ]
     },
