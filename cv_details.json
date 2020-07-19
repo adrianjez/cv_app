@@ -7,8 +7,8 @@
 	"phone" : "731552855",
 	"date_of_birth" : "28.10.1993",
 	"nationality" : "Poland",
-	"linkedin" : "https://www.linkedin.com/in/adrian-jeż-264359118",
-	"github" : "https://github.com/adrianjez",
+	"linkedin_url" : "https://www.linkedin.com/in/adrian-jeż-264359118",
+	"github_url" : "https://github.com/adrianjez",
 	"photo_url" : "https://github.com/adrianjez/cv_app/raw/master/IMG_0096.jpg",
 	"address" : {
 		"line1" : "Katowice, Słoneczna 82/37",
