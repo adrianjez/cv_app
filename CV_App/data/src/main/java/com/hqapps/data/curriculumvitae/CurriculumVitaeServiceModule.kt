@@ -17,7 +17,9 @@ class CurriculumVitaeServiceModule {
 
     @Provides
     @Singleton
-    fun provideCurriculumVitaeRepository(curriculumVitaeRepository: CurriculumVitaeRepositoryImplementation): CurriculumVitaeRepository {
+    fun provideCurriculumVitaeRepository(
+        curriculumVitaeRepository: CurriculumVitaeRepositoryImplementation)
+            : CurriculumVitaeRepository {
         return curriculumVitaeRepository
     }
 }

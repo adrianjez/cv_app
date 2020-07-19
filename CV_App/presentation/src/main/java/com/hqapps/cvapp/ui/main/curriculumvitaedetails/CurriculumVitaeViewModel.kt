@@ -1,6 +1,7 @@
 package com.hqapps.cvapp.ui.main.curriculumvitaedetails
 
 import android.util.Log
+import android.widget.Toast
 import androidx.databinding.ObservableField
 import com.hqapps.cvapp.ui.base.BaseView
 import com.hqapps.cvapp.ui.base.BaseViewModel
@@ -24,13 +25,16 @@ class CurriculumVitaeViewModel @Inject constructor(
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe (
-                onCurriculumDetailsClaimed, Consumer {
-                    Log.e("","")
-                }
-            ).disposeOnDetach()
+                onCurriculumDetailsClaimed, errorConsumer
+            )
+            .disposeOnDetach()
     }
 
-    val onCurriculumDetailsClaimed = Consumer<CurriculumVitaeEntity> {
+    private val onCurriculumDetailsClaimed = Consumer<CurriculumVitaeEntity> {
         adapter.set(CurriculumVitaeDetailsAdapter(it))
+    }
+
+    private val errorConsumer = Consumer<Throwable> {
+
     }
 }

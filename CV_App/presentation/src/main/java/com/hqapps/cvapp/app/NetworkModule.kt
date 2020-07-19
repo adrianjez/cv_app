@@ -24,6 +24,7 @@ class NetworkModule {
     @Provides
     @Singleton
     fun provideRetrofit(callFactory: Call.Factory) : Retrofit {
+        val factory = GsonConverterFactory.create()
         return Retrofit.Builder()
             .callFactory(callFactory)
             .addConverterFactory(GsonConverterFactory.create())

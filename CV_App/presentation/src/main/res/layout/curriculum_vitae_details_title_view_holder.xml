@@ -1,18 +1,18 @@
-<layout xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp">
+        android:layout_marginTop="20dp">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/card"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/curriculum_card_background"
-            android:paddingBottom="4dp"
+            android:layout_marginBottom="-20dp"
+            app:cardCornerRadius="15dp"
             app:cardElevation="3dp"
             app:cardPreventCornerOverlap="false"
             app:cardUseCompatPadding="true"
@@ -30,13 +30,13 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
-                    android:id="@+id/titleContainer"
-                    android:layout_width="213dp"
+                    android:id="@+id/details_title_container"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="sans-serif-black"
                     android:text="Work history"
                     android:textColor="#000"
-                    android:textSize="30sp"
+                    android:textSize="25sp"
                     app:layout_constraintStart_toStartOf="@+id/end_guidline"
                     app:layout_constraintTop_toTopOf="@+id/top_guidline" />
 
@@ -44,13 +44,12 @@
                     android:id="@+id/view"
                     android:layout_width="0dp"
                     android:layout_height="2dp"
-                    android:layout_marginTop="50dp"
                     android:layout_marginBottom="10dp"
                     android:background="#1AAC7A"
                     app:layout_constraintBottom_toTopOf="@+id/bottom_guidline"
-                    app:layout_constraintEnd_toEndOf="@+id/titleContainer"
+                    app:layout_constraintEnd_toEndOf="@+id/details_title_container"
                     app:layout_constraintStart_toStartOf="@+id/end_guidline"
-                    app:layout_constraintTop_toTopOf="@+id/titleContainer" />
+                    app:layout_constraintTop_toBottomOf="@+id/details_title_container" />
 
 
                 <androidx.constraintlayout.widget.Guideline
@@ -58,7 +57,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    app:layout_constraintGuide_percent="0.1" />
+                    app:layout_constraintGuide_begin="40dp" />
 
 
                 <androidx.constraintlayout.widget.Guideline
@@ -95,7 +94,7 @@
         </androidx.cardview.widget.CardView>
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
 
 
 </layout>

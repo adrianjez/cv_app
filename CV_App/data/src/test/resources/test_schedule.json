@@ -1,44 +1,97 @@
-[
-  {
-    "id": "1",
-    "title": "Liverpool v Porto",
-    "subtitle": "UEFA Champions League",
-    "date": "2019-04-17T06:26:13.558Z",
-    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/dazn-recruitment/o/310176837169_image-header_pDach_1554579780000.jpeg?alt=media&token=1777d26b-d051-4b5f-87a8-7633d3d6dd20"
+{
+  "title": "Adrian Jeż",
+  "subtitle": "Pasionate developer",
+  "about": "A well-organized and motivated individual with a Master and Engineer’s Degree in Computer Science. Well versed in mobile apps development and modern UI design. Flexible, creative and likes challenges. Native Polish speaker with intermediate English knowledge is looking for position as Android Developer.",
+  "age": 27,
+  "email": "adrian98985@gmail.com",
+  "phone": "731552855",
+  "date_of_birth": "28.10.1993",
+  "nationality": "Poland",
+  "linkedin_url": "https://www.linkedin.com/in/adrian-jeż-264359118",
+  "github_url": "https://github.com/adrianjez",
+  "photo_url": "https://github.com/adrianjez/cv_app/raw/master/IMG_0096.jpg",
+  "address": {
+    "line1": "Katowice, Słoneczna 82/37",
+    "line2": "40-137 Katowice"
   },
-  {
-    "id": "2",
-    "title": "Nîmes v Rennes",
-    "subtitle": "Ligue 1",
-    "date": "2019-04-17T04:26:13.558Z",
-    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/dazn-recruitment/o/310381637057_image-header_pDach_1554664873000.jpeg?alt=media&token=53616931-55a8-476e-b1b7-d18fc22a2bf0"
-  },
-  {
-    "id": "3",
-    "title": "Tottenham v Man City",
-    "subtitle": "UEFA Champions League",
-    "date": "2019-04-17T08:26:13.558Z",
-    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/dazn-recruitment/o/310511685198_image-header_pDach_1554872450000.jpeg?alt=media&token=5524d719-261e-49e6-abf3-a74c30df3e27"
-  },
-  {
-    "id": "4",
-    "title": "Suns @ Mavericks",
-    "subtitle": "NBA",
-    "date": "2019-04-17T09:26:13.558Z",
-    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/dazn-recruitment/o/310572613233_image-header_pDach_1554812508000.jpeg?alt=media&token=4ee99b47-dcae-4016-b213-54e14a0d40d8"
-  },
-  {
-    "id": "5",
-    "title": "Chelsea v West Ham",
-    "subtitle": "Premier League",
-    "date": "2019-04-17T10:26:13.558Z",
-    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/dazn-recruitment/o/310632005268_image-header_pDach_1554838415000.jpeg?alt=media&token=5a512da9-d268-432c-9da2-088c8e6737e1"
-  },
-  {
-    "id": "6",
-    "title": "Hamburger SV v 1. FC Magdeburg",
-    "subtitle": "2. Bundesliga",
-    "date": "2019-04-17T11:26:13.558Z",
-    "imageUrl": "https://firebasestorage.googleapis.com/v0/b/dazn-recruitment/o/310638661042_image-header_pDach_1554833728000.jpeg?alt=media&token=0415f88e-8d07-4b95-b5d6-4ee3efaa8e5c"
-  }
-]
+  "work_history": [
+    {
+      "title": "Education",
+      "details": [
+        {
+          "title": "Czestochowa University of Technology",
+          "subtitle": "2019-2020",
+          "details": "A lot of details about my work"
+        },
+        {
+          "title": "Czestochowa University of Technology",
+          "subtitle": "2019-2020",
+          "details": "A lot of details about my work"
+        }
+      ]
+    },
+    {
+      "title": "Professional Experience",
+      "details": [
+        {
+          "title": "Android Developer",
+          "subtitle": "2019-2020",
+          "details": "A lot of details about my work"
+        },
+        {
+          "title": "Android Developer",
+          "subtitle": "2019-2020",
+          "details": "A lot of details about my work"
+        }
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "Android",
+      "percentage": 90
+    },
+    {
+      "name": "Dagger2",
+      "percentage": 90
+    },
+    {
+      "name": "Retrofit",
+      "percentage": 90
+    },
+    {
+      "name": "RxJava/RxAndroid",
+      "percentage": 90
+    },
+    {
+      "name": "Git/Gitlab",
+      "percentage": 90
+    },
+    {
+      "name": "Kotlin",
+      "percentage": 90
+    },
+    {
+      "name": "JUnit/Espresso",
+      "percentage": 90
+    },
+    {
+      "name": "CI/Jenkins",
+      "percentage": 90
+    },
+    {
+      "name": "Android",
+      "percentage": 90
+    }
+  ],
+  "interests": [
+    "trance music",
+    "technology news",
+    "scientific movies",
+    "game development",
+    "bicycling"
+  ],
+  "additional_informations": [
+    "driving license B"
+  ]
+}
