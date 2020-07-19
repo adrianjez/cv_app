@@ -34,14 +34,19 @@
       "title": "Professional Experience",
       "details": [
         {
-          "title": "Android Developer",
-          "subtitle": "2019-2020",
+          "title": "eConsulting, Warszawa \nING Bank Śląski, Katowice",
+          "subtitle": "OCTOBER 2018 - NOW",
           "details": "A lot of details about my work"
         },
         {
-          "title": "Android Developer",
-          "subtitle": "2019-2020",
-          "details": "A lot of details about my work"
+          "title": "I2ASolutions, San Diego California \nBO in Częstochowa",
+          "subtitle": "APRIL 2015 OCTOBER 2018",
+          "details": "Android Developer Internship \n Creation applications for AndroidOS whicha reusing REST API \n Working with Google Maps API V2"
+        },
+        {
+          "title": "miCoder, Zawiercie",
+          "subtitle": "Summer 2015",
+          "details": "Android Developer Internship \n Creation applications for AndroidOS whicha reusing REST API \n Working with Google Maps API V2"
         }
       ]
     }
