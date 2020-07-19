@@ -1,97 +1,97 @@
 {
-   "title":"Adrian Jeż",
-   "subtitle":"Pasionate developer",
-   "about":"A well-organized and motivated individual with a Master and Engineer’s Degree in Computer Science. Well versed in mobile apps development and modern UI design. Flexible, creative and likes challenges. Native Polish speaker with intermediate English knowledge is looking for position as Android Developer.",
-   "age":27,
-   "email":"adrian98985@gmail.com",
-   "phone":"731552855",
-   "date_of_birth":"28.10.1993",
-   "nationality":"Poland",
-   "linkedin_url":"https://www.linkedin.com/in/adrian-jeż-264359118",
-   "github_url":"https://github.com/adrianjez",
-   "photo_url":"https://github.com/adrianjez/cv_app/raw/master/IMG_0096.jpg",
-   "address":{
-      "line1":"Katowice, Słoneczna 82/37",
-      "line2":"40-137 Katowice"
-   },
-   "work_history":[
-      {
-         "title":"Education",
-         "details":[
-            {
-               "title":"Czestochowa University of Technology",
-               "subtitle":"2019-2020",
-               "details":"A lot of details about my work"
-            },
-            {
-               "title":"Czestochowa University of Technology",
-               "subtitle":"2019-2020",
-               "details":"A lot of details about my work"
-            }
-         ]
-      },
-      {
-         "title":"Professional Experience",
-         "details":[
-            {
-               "title":"Android Developer",
-               "subtitle":"2019-2020",
-               "details":"A lot of details about my work"
-            },
-            {
-               "title":"Android Developer",
-               "subtitle":"2019-2020",
-               "details":"A lot of details about my work"
-            }
-         ]
-      }
-   ],
-   "skills":[
-      {
-         "name":"Android",
-         "percentage":90
-      },
-      {
-         "name":"Dagger2",
-         "percentage":90
-      },
-      {
-         "name":"Retrofit",
-         "percentage":90
-      },
-      {
-         "name":"RxJava/RxAndroid",
-         "percentage":90
-      },
-      {
-         "name":"Git/Gitlab",
-         "percentage":90
-      },
-      {
-         "name":"Kotlin",
-         "percentage":90
-      },
-      {
-         "name":"JUnit/Espresso",
-         "percentage":90
-      },
-      {
-         "name":"CI/Jenkins",
-         "percentage":90
-      },
-      {
-         "name":"Android",
-         "percentage":90
-      }
-   ],
-   "interests":[
-      "trance music",
-      "technology news",
-      "scientific movies",
-      "game development",
-      "bicycling"
-   ],
-   "additional_informations":[
-      "driving license B"
-   ]
+  "title": "Adrian Jeż",
+  "subtitle": "Pasionate developer",
+  "about": "A well-organized and motivated individual with a Master and Engineer’s Degree in Computer Science. Well versed in mobile apps development and modern UI design. Flexible, creative and likes challenges. Native Polish speaker with intermediate English knowledge is looking for position as Android Developer.",
+  "age": 27,
+  "email": "adrian98985@gmail.com",
+  "phone": "731552855",
+  "date_of_birth": "28.10.1993",
+  "nationality": "Poland",
+  "linkedin_url": "https://www.linkedin.com/in/adrian-jeż-264359118",
+  "github_url": "https://github.com/adrianjez",
+  "photo_url": "https://github.com/adrianjez/cv_app/raw/master/IMG_0096.jpg",
+  "address": {
+    "line1": "Katowice, Słoneczna 82/37",
+    "line2": "40-137 Katowice"
+  },
+  "work_history": [
+    {
+      "title": "Education",
+      "details": [
+        {
+          "title": "Czestochowa University of Technology",
+          "subtitle": "2019-2020",
+          "details": "A lot of details about my work"
+        },
+        {
+          "title": "Czestochowa University of Technology",
+          "subtitle": "2019-2020",
+          "details": "A lot of details about my work"
+        }
+      ]
+    },
+    {
+      "title": "Professional Experience",
+      "details": [
+        {
+          "title": "Android Developer",
+          "subtitle": "2019-2020",
+          "details": "A lot of details about my work"
+        },
+        {
+          "title": "Android Developer",
+          "subtitle": "2019-2020",
+          "details": "A lot of details about my work"
+        }
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "Android",
+      "percentage": 90
+    },
+    {
+      "name": "Dagger2",
+      "percentage": 90
+    },
+    {
+      "name": "Retrofit",
+      "percentage": 90
+    },
+    {
+      "name": "RxJava/RxAndroid",
+      "percentage": 90
+    },
+    {
+      "name": "Git/Gitlab",
+      "percentage": 90
+    },
+    {
+      "name": "Kotlin",
+      "percentage": 90
+    },
+    {
+      "name": "JUnit/Espresso",
+      "percentage": 90
+    },
+    {
+      "name": "CI/Jenkins",
+      "percentage": 90
+    },
+    {
+      "name": "Android",
+      "percentage": 90
+    }
+  ],
+  "interests": [
+    "trance music",
+    "technology news",
+    "scientific movies",
+    "game development",
+    "bicycling"
+  ],
+  "additional_informations": [
+    "driving license B"
+  ]
 }
