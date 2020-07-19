@@ -35,18 +35,18 @@
       "details": [
         {
           "title": "eConsulting, Warszawa \nING Bank Śląski, Katowice",
-          "subtitle": "OCTOBER 2018 - NOW",
-          "details": "A lot of details about my work"
+          "subtitle": "October 2018 - NOW",
+          "details": "Android Developer contractor \nDeveloping of MojeING application \nReimplementation of app navigation with Android Navigation Component usage \nExperience with other Android Architecture Components such as: LiveData, DataBinding, ViewModel \nReimplementation core features such as „BLIK” payment option with Kotlin language usage \nWriting Unit and Instrumented Tests"
         },
         {
           "title": "I2ASolutions, San Diego California \nBO in Częstochowa",
-          "subtitle": "APRIL 2015 OCTOBER 2018",
-          "details": "Android Developer Internship \n Creation applications for AndroidOS whicha reusing REST API \n Working with Google Maps API V2"
+          "subtitle": "April 2015 October 2018",
+          "details": "Android Developer \nDeveloping Android apps based on Gradle build system using Android Studio \nExperience with app development with Beacons usage on both platforms (iOS and Android) \nExperience with Android OS adaptation based on AOSP and root privileges \nCreating common and more advanced UI with usage of popular Android SDK components such as: RecyclerView, ListView, Adapters, WebViews and by creating custom ones \nKnowledge of MVP, MVC, MVVM, Kotlin, Fabric \nExperience with Couchbase and app data sync \nLittle of experience with Java EE (Spring Boot Framework) \nExperience with Jenkins jobs \nExperience with iOS(Swift) \nExperience with Unity and Augmented Reality in mobile apps with Vuforia framework usage"
         },
         {
           "title": "miCoder, Zawiercie",
           "subtitle": "Summer 2015",
-          "details": "Android Developer Internship \n Creation applications for AndroidOS whicha reusing REST API \n Working with Google Maps API V2"
+          "details": "Android Developer Internship \n Creation applications for AndroidOS whicha reusing REST API \nWorking with Google Maps API V2"
         }
       ]
     }
