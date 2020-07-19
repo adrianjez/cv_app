@@ -1,38 +1,102 @@
 {
-	"title" : "Adrian Jeż",
-	"about" : "Pasionate developer",
-	"photo_url" : "https://github.com/adrianjez/cv_app/raw/master/IMG_0096.jpg",
-	"work_history" : [
-		{
-			"title" : "Education",
-			"details" : [
-				{
-					"title" : "Czestochowa University of Technology",
-					"subtitle" : "2019-2020",
-					"details" : "A lot of details about my work"
-				},
-				{
-					"title" : "Czestochowa University of Technology",
-					"subtitle" : "2019-2020",
-					"details" : "A lot of details about my work"
-				}
-			]
-		}, {
-			"title" : "Professional Experience",
-			"details" : [
-				{
-					"title" : "Android Developer",
-					"subtitle" : "2019-2020",
-					"details" : "A lot of details about my work"
-				},
-				{
-					"title" : "Android Developer",
-					"subtitle" : "2019-2020",
-					"details" : "A lot of details about my work"
-				}
-			]
-		}
-	]
+  "title": "Adrian Jeż",
+  "subtitle": "Android developer",
+  "about": "A well-organized and motivated individual with a Master and Engineer’s Degree in Computer Science. Well versed in mobile apps development and modern UI design. Flexible, creative and likes challenges. Native Polish speaker with intermediate English knowledge is looking for position as Android Developer.",
+  "age": 27,
+  "email": "adrian98985@gmail.com",
+  "phone": "731552855",
+  "date_of_birth": "28.10.1993",
+  "nationality": "Poland",
+  "linkedin_url": "https://www.linkedin.com/in/adrian-jeż-264359118",
+  "github_url": "https://github.com/adrianjez",
+  "photo_url": "https://github.com/adrianjez/cv_app/raw/master/IMG_0096.jpg",
+  "address": {
+    "line1": "Katowice, Słoneczna 82/37",
+    "line2": "40-137 Katowice"
+  },
+  "work_history": [
+    {
+      "title": "Education",
+      "details": [
+        {
+          "title": "University of Technology, Częstochowa",
+          "subtitle": "2016-2017",
+          "details": "Topic of master thesis: Tailoring and customizations of Android OS Specialization: Business applications and databases"
+        },
+        {
+          "title": "Czestochowa University of Technology",
+          "subtitle": "2012-2016",
+          "details": "Topic of engineer thesis: Construction of application user interface for Android based on fragments mechanism \nSecialization: Programming of Internet Applications \nGraduate of speciality ordered by the polish Government"
+        }
+      ]
+    },
+    {
+      "title": "Professional Experience",
+      "details": [
+        {
+          "title": "eConsulting, Warszawa \nING Bank Śląski, Katowice",
+          "subtitle": "October 2018 - NOW",
+          "details": "Android Developer contractor \nDeveloping of MojeING application \nReimplementation of app navigation with Android Navigation Component usage \nExperience with other Android Architecture Components such as: LiveData, DataBinding, ViewModel \nReimplementation core features such as „BLIK” payment option with Kotlin language usage \nWriting Unit and Instrumented Tests"
+        },
+        {
+          "title": "I2ASolutions, San Diego California \nBO in Częstochowa",
+          "subtitle": "April 2015 October 2018",
+          "details": "Android Developer \nDeveloping Android apps based on Gradle build system using Android Studio \nExperience with app development with Beacons usage on both platforms (iOS and Android) \nExperience with Android OS adaptation based on AOSP and root privileges \nCreating common and more advanced UI with usage of popular Android SDK components such as: RecyclerView, ListView, Adapters, WebViews and by creating custom ones \nKnowledge of MVP, MVC, MVVM, Kotlin, Fabric \nExperience with Couchbase and app data sync \nLittle of experience with Java EE (Spring Boot Framework) \nExperience with Jenkins jobs \nExperience with iOS(Swift) \nExperience with Unity and Augmented Reality in mobile apps with Vuforia framework usage"
+        },
+        {
+          "title": "miCoder, Zawiercie",
+          "subtitle": "Summer 2015",
+          "details": "Android Developer Internship \nCreation applications for AndroidOS which a reusing REST API \nWorking with Google Maps API V2"
+        }
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "Android",
+      "percentage": 90
+    },
+    {
+      "name": "Dagger2",
+      "percentage": 90
+    },
+    {
+      "name": "Retrofit",
+      "percentage": 90
+    },
+    {
+      "name": "RxJava/RxAndroid",
+      "percentage": 90
+    },
+    {
+      "name": "Git/Gitlab",
+      "percentage": 90
+    },
+    {
+      "name": "Kotlin",
+      "percentage": 90
+    },
+    {
+      "name": "JUnit/Espresso",
+      "percentage": 90
+    },
+    {
+      "name": "CI/Jenkins",
+      "percentage": 90
+    },
+    {
+      "name": "Android",
+      "percentage": 90
+    }
+  ],
+  "interests": [
+    "trance music",
+    "technology news",
+    "scientific movies",
+    "game development",
+    "bicycling"
+  ],
+  "additional_informations": [
+    "driving license B"
+  ]
 }
-
-
