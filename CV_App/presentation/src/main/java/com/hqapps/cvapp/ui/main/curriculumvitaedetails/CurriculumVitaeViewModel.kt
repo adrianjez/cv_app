@@ -1,9 +1,9 @@
 package com.hqapps.cvapp.ui.main.curriculumvitaedetails
 
-import android.util.Log
-import android.widget.Toast
+import android.content.res.Resources
 import androidx.databinding.ObservableField
-import com.hqapps.cvapp.ui.base.BaseView
+import androidx.lifecycle.MutableLiveData
+import com.hqapps.cvapp.R
 import com.hqapps.cvapp.ui.base.BaseViewModel
 import com.hqapps.domain.interactor.LoadCurriculumVitaeUseCase
 import com.hqapps.domain.model.CurriculumVitaeEntity
@@ -12,15 +12,24 @@ import io.reactivex.functions.Consumer
 import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
 
-interface CurriculumVitaeView : BaseView
 class CurriculumVitaeViewModel @Inject constructor(
-    private val loadCurriculumVitaeDetailsUseCase: LoadCurriculumVitaeUseCase
-): BaseViewModel<CurriculumVitaeView>() {
+    private val loadCurriculumVitaeDetailsUseCase: LoadCurriculumVitaeUseCase,
+    private val resources: Resources
+): BaseViewModel() {
 
     val adapter = ObservableField<CurriculumVitaeDetailsAdapter>()
+    val errorMessageId = MutableLiveData<Int>()
 
-    override fun onAttach(view: CurriculumVitaeView) {
-        super.onAttach(view)
+    private val onCurriculumDetailsClaimed = Consumer<CurriculumVitaeEntity> {
+        adapter.set(CurriculumVitaeDetailsAdapter(it, resources))
+    }
+
+    private val errorConsumer = Consumer<Throwable> {
+        it.printStackTrace()
+        errorMessageId.postValue(R.string.network_error_message)
+    }
+
+    init {
         loadCurriculumVitaeDetailsUseCase.buildUseCaseObservable("cv_details.json")
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
@@ -30,11 +39,5 @@ class CurriculumVitaeViewModel @Inject constructor(
             .disposeOnDetach()
     }
 
-    private val onCurriculumDetailsClaimed = Consumer<CurriculumVitaeEntity> {
-        adapter.set(CurriculumVitaeDetailsAdapter(it))
-    }
 
-    private val errorConsumer = Consumer<Throwable> {
-
-    }
 }

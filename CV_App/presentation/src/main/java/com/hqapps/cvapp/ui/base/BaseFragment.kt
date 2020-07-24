@@ -14,20 +14,9 @@ import dagger.android.support.DaggerFragment
 import timber.log.Timber
 import javax.inject.Inject
 
-/*
-abstract class BaseFragment: DaggerFragment(){
-
-    protected fun processError(message: String) =
-        Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
-
-    protected fun processShowHideProgression(showOrHide: Boolean){
-        progress.visibility = if (showOrHide) View.VISIBLE else View.GONE
-    }
-}*/
-abstract class BaseFragment<VIEW : BaseView, VM : BaseViewModel<VIEW>, BINDING : ViewDataBinding>(
+abstract class BaseFragment<VM : BaseViewModel, BINDING : ViewDataBinding>(
     @LayoutRes private val layout: Int
-) : DaggerFragment(),
-    BaseView {
+) : DaggerFragment(){
 
     @Inject
     protected lateinit var viewModel: VM
@@ -41,25 +30,7 @@ abstract class BaseFragment<VIEW : BaseView, VM : BaseViewModel<VIEW>, BINDING :
         val binding: BINDING = DataBindingUtil.inflate(inflater, layout, container, false)
         Timber.w("onCreateView viewModel = ${viewModel.hashCode()}")
         binding.setVariable(BR.viewModel, viewModel)
-        afterCreateView(binding.root)
         return binding.root
-    }
-
-    open fun afterCreateView(view: View) {}
-
-
-    override fun onStart() {
-        Timber.w("onStart ${hashCode()}")
-        super.onStart()
-        @Suppress("UNCHECKED_CAST")
-        viewModel.onAttach(this as VIEW)
-    }
-
-    override fun onStop() {
-        Timber.w("onStop ${hashCode()}")
-        @Suppress("UNCHECKED_CAST")
-        viewModel.onDetach(this as VIEW)
-        super.onStop()
     }
 
     protected fun requireMainActivity() = requireActivity() as MainActivity

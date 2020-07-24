@@ -1,7 +1,17 @@
 <resources>
-    <string name="app_name">DAZNTestApp</string>
-    <string name="please_wait">Please wait</string>
+    <string name="app_name">CV App</string>
 
-    <string name="menu_title_events">Events</string>
-    <string name="menu_title_schedule">Schedule</string>
+    <string name="title_work_history">Work history</string>
+    <string name="title_professional_skills">Professional skills</string>
+    <string name="title_interests">Interests</string>
+    <string name="title_additional_informations">Additional informations</string>
+
+    <string name="network_error_message">Network error</string>
+    <string name="subtitle_work_history">Work history</string>
+    <string name="subtitle_about_me">About Me</string>
+    <string name="subtitle_age">Age</string>
+    <string name="subtitle_address">Address</string>
+    <string name="subtitle_email">Email</string>
+    <string name="subtitle_phone">Phone</string>
+    <string name="subtitle_dob">DOB:</string>
 </resources>

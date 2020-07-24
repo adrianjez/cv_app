@@ -1,5 +1,7 @@
 package com.hqapps.cvapp.ui
 
+import android.content.Context
+import android.content.res.Resources
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.hqapps.cvapp.app.AppViewModelFactory
@@ -23,6 +25,9 @@ class UiModule {
         providers: Map<Class<out ViewModel>, @JvmSuppressWildcards Provider<ViewModel>>
     ): ViewModelProvider.Factory =
         AppViewModelFactory(providers)
+
+    @Provides
+    fun provideResources(context: Context): Resources = context.resources
 
     @Module
     abstract class UIModuleProvider {

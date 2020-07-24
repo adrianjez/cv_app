@@ -1,5 +1,6 @@
 package com.hqapps.cvapp.ui.main.curriculumvitaedetails
 
+import android.content.res.Resources
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,17 +15,24 @@ import com.hqapps.cvapp.R
 import com.hqapps.domain.model.CurriculumVitaeEntity
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.curriculum_vitae_details_details_view_holder.view.*
-import kotlinx.android.synthetic.main.curriculum_vitae_details_details_view_holder.view.details_card_view
 import kotlinx.android.synthetic.main.curriculum_vitae_details_subtitle_view_holder.view.*
 import kotlinx.android.synthetic.main.curriculum_vitae_details_title_view_holder.view.*
 import kotlinx.android.synthetic.main.curriculum_vitae_profile_view_holder.view.*
 import kotlinx.android.synthetic.main.curriculum_vitae_skill_view_holder.view.*
+import kotlinx.android.synthetic.main.curruculum_vitae_additional_information_view_holder.view.*
 import kotlinx.android.synthetic.main.curruculum_vitae_details_about_view_holder.view.*
+import java.util.*
 
 class CurriculumVitaeDetailsAdapter(
     private val curriculumDetails: CurriculumVitaeEntity,
-    private var mainData: ArrayList<ViewType> = arrayListOf()
+    private var resources: Resources,
+    private var mainData: ArrayList<ViewType> = arrayListOf(),
+    private val negativeMarginValue: Float = resources.displayMetrics.density * negativeMargin
 ) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+
+    companion object {
+        const val negativeMargin = 20
+    }
 
     init {
         rebuildList()
@@ -36,7 +44,8 @@ class CurriculumVitaeDetailsAdapter(
         DETAILS_TITLE(2),
         DETAILS_SUBTITLE(3),
         DETAILS_DETAILS(4),
-        SKILLS_VIEW_TYPE(5)
+        SKILLS_VIEW_TYPE(5),
+        ADDITIONAL_INFORMATION_VIEW_TYPE(6)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder =
@@ -71,6 +80,11 @@ class CurriculumVitaeDetailsAdapter(
                     R.layout.curriculum_vitae_details_details_view_holder, parent, false
                 )
             )
+            VIEWTYPE.ADDITIONAL_INFORMATION_VIEW_TYPE.id -> AdditionalInformationViewHolder(
+                LayoutInflater.from(parent.context).inflate(
+                    R.layout.curruculum_vitae_additional_information_view_holder, parent, false
+                )
+            )
             else -> throw RuntimeException("Unsupported view type found")
         }
 
@@ -95,6 +109,9 @@ class CurriculumVitaeDetailsAdapter(
             )
             VIEWTYPE.SKILLS_VIEW_TYPE.id -> (holder as SkillViewHolder).bind(
                 (mainData[position] as SkillViewType)
+            )
+            VIEWTYPE.ADDITIONAL_INFORMATION_VIEW_TYPE.id -> (holder as AdditionalInformationViewHolder).bind(
+                (mainData[position] as AdditionalInformationViewType)
             )
         }
     }
@@ -124,7 +141,8 @@ class CurriculumVitaeDetailsAdapter(
             )
         )
         if (curriculumDetails.work_history.size > 0) {
-            mainData.add(DetailsViewTypeTitle(VIEWTYPE.DETAILS_TITLE.id, "Work history"))
+            mainData.add(DetailsViewTypeTitle(VIEWTYPE.DETAILS_TITLE.id,
+                resources.getString(R.string.title_work_history)))
             curriculumDetails.work_history.forEachIndexed { i, workHistory ->
                 mainData.add(
                     DetailsViewTypeSubtitle(VIEWTYPE.DETAILS_SUBTITLE.id, workHistory.title)
@@ -143,8 +161,9 @@ class CurriculumVitaeDetailsAdapter(
         }
 
         if (curriculumDetails.skills.size > 0) {
-            mainData.add(DetailsViewTypeTitle(VIEWTYPE.DETAILS_TITLE.id, "Professional skills"))
-            curriculumDetails.skills.forEachIndexed {index, skill ->
+            mainData.add(DetailsViewTypeTitle(VIEWTYPE.DETAILS_TITLE.id,
+                resources.getString(R.string.title_professional_skills)))
+            curriculumDetails.skills.forEachIndexed { index, skill ->
                 mainData.add(
                     SkillViewType(
                         VIEWTYPE.SKILLS_VIEW_TYPE.id,
@@ -154,22 +173,52 @@ class CurriculumVitaeDetailsAdapter(
                 )
             }
         }
+
+        if (curriculumDetails.interests.size > 0) {
+            mainData.add(DetailsViewTypeTitle(VIEWTYPE.DETAILS_TITLE.id,
+                resources.getString(R.string.title_interests)))
+            curriculumDetails.interests.forEachIndexed { index, interest ->
+                mainData.add(
+                    AdditionalInformationViewType(
+                        VIEWTYPE.ADDITIONAL_INFORMATION_VIEW_TYPE.id,
+                        additionalInformation = interest,
+                        isLast = (index == curriculumDetails.interests.size.minus(1))
+                    )
+                )
+            }
+        }
+
+        if (curriculumDetails.additional_informations.size > 0) {
+            mainData.add(DetailsViewTypeTitle(VIEWTYPE.DETAILS_TITLE.id,
+                resources.getString(R.string.title_additional_informations)))
+            curriculumDetails.additional_informations.forEachIndexed { index, additionalInformation ->
+                mainData.add(
+                    AdditionalInformationViewType(
+                        VIEWTYPE.ADDITIONAL_INFORMATION_VIEW_TYPE.id,
+                        additionalInformation = additionalInformation,
+                        isLast = (index == curriculumDetails.additional_informations.size.minus(1))
+                    )
+                )
+            }
+        }
     }
 
     inner class SkillViewHolder(
         itemView: View,
-        private val skillNameContainer: TextView = itemView.skill_name_continer,
+        private val skillNameContainer: TextView = itemView.skill_name_container,
         private val skillProgress: ProgressBar = itemView.skill_progress,
         private val cardView: CardView = itemView.skill_card_view
     ) : RecyclerView.ViewHolder(itemView) {
 
-        fun bind(listItemData: SkillViewType){
+        fun bind(listItemData: SkillViewType) {
             skillNameContainer.text = listItemData.skill.name
             skillProgress.progress = listItemData.skill.percentage
             if (listItemData.isLast) {
-                (cardView.layoutParams as FrameLayout.LayoutParams).bottomMargin = 0
+                (cardView.layoutParams as FrameLayout.LayoutParams)
+                    .bottomMargin = 0
             } else {
-                (cardView.layoutParams as FrameLayout.LayoutParams).bottomMargin = -50
+                (cardView.layoutParams as FrameLayout.LayoutParams)
+                    .bottomMargin = -negativeMarginValue.toInt()
             }
         }
     }
@@ -248,11 +297,35 @@ class CurriculumVitaeDetailsAdapter(
             detailsH2.text = listItemData.workHistoryDetails.subtitle
             detailsH3.text = listItemData.workHistoryDetails.details
             if (listItemData.isLast) {
-                (horizontalLine.layoutParams as ConstraintLayout.LayoutParams).bottomMargin = 50
-                (cardView.layoutParams as FrameLayout.LayoutParams).bottomMargin = 0
+                (horizontalLine.layoutParams as ConstraintLayout.LayoutParams)
+                    .bottomMargin = negativeMarginValue.toInt()
+                (cardView.layoutParams as FrameLayout.LayoutParams)
+                    .bottomMargin = 0
             } else {
-                (horizontalLine.layoutParams as ConstraintLayout.LayoutParams).bottomMargin = 0
-                (cardView.layoutParams as FrameLayout.LayoutParams).bottomMargin = -50
+                (horizontalLine.layoutParams as ConstraintLayout.LayoutParams)
+                    .bottomMargin = 0
+                (cardView.layoutParams as FrameLayout.LayoutParams)
+                    .bottomMargin = -negativeMarginValue.toInt()
+            }
+        }
+    }
+
+    inner class AdditionalInformationViewHolder(
+        itemView: View,
+        private val additionalInformation: TextView = itemView.additional_information_container,
+        private val additionalInformationCardView: CardView = itemView.additional_information_card_view
+    ) :
+        RecyclerView.ViewHolder(itemView) {
+
+        fun bind(listItemData: AdditionalInformationViewType) {
+            additionalInformation.text = listItemData.additionalInformation
+                .toUpperCase(Locale.getDefault())
+            if (listItemData.isLast) {
+                (additionalInformationCardView.layoutParams as FrameLayout.LayoutParams)
+                    .bottomMargin = 0
+            } else {
+                (additionalInformationCardView.layoutParams as FrameLayout.LayoutParams)
+                    .bottomMargin = -negativeMarginValue.toInt()
             }
         }
     }

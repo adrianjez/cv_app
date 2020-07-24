@@ -1,5 +1,6 @@
 package com.hqapps.cvapp.ui.main.curriculumvitaedetails
 
+import android.content.res.Resources
 import androidx.lifecycle.ViewModel
 import com.hqapps.cvapp.app.ViewModelKey
 import com.hqapps.domain.interactor.LoadCurriculumVitaeUseCase
@@ -24,8 +25,9 @@ abstract class CurriculumVitaeDetailsModule {
         @Provides
         @IntoMap
         @ViewModelKey(CurriculumVitaeViewModel::class)
-        fun provideListNotesViewModel(loadCurriculumVitaeUseCase: LoadCurriculumVitaeUseCase): ViewModel =
-            CurriculumVitaeViewModel(loadCurriculumVitaeUseCase)
+        fun provideCurriculumVitaeViewModel(loadCurriculumVitaeUseCase: LoadCurriculumVitaeUseCase,
+                                      resources: Resources): ViewModel =
+            CurriculumVitaeViewModel(loadCurriculumVitaeUseCase, resources)
     }
 
 }

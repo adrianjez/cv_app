@@ -55,6 +55,7 @@
                 android:id="@+id/profile_photo_container"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                tools:ignore="ContentDescription"
                 android:scaleType="centerCrop" />
 
             <ImageView
@@ -62,6 +63,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#000"
+                tools:ignore="ContentDescription"
                 android:alpha="0.2"
                 android:scaleType="centerCrop" />
 

@@ -11,11 +11,9 @@ class MainActivity : BaseActivity() {
 
     companion object {
         private const val FRAGMENT_BUNDLE_KEY = "FRAGMENT_BUNDLE_KEY"
-        private const val CURRENTLY_SELECTED_OPTION_BUNDLE_KEY = "CURRENTLY_SELECTED_OPTION"
     }
 
     private var content: Fragment? = null
-    private var currentItemID =  R.id.navigation_events
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,33 +27,13 @@ class MainActivity : BaseActivity() {
         content?.let {
             supportFragmentManager.putFragment(outState, FRAGMENT_BUNDLE_KEY, it)
         }
-        outState.putInt(CURRENTLY_SELECTED_OPTION_BUNDLE_KEY, currentItemID)
     }
-/*
-    private val onNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
-        if(currentItemID != item.itemId) {
-            currentItemID = item.itemId
-            when (item.itemId) {
-                R.id.navigation_events -> {
-                    content = CurriculumVitaeDetailsFragment()
-                    show(content as Fragment)
-                    return@OnNavigationItemSelectedListener true
-                }
-                R.id.navigation_schedule -> {
-                    content = CurriculumVitaeDetailsFragment()
-                    show(content as Fragment)
-                    return@OnNavigationItemSelectedListener true
-                }
-            }
-        }
-        false
-    }*/
+
     /**
     * Private methods
     */
     private fun makeStateRestoration(savedInstanceState: Bundle){
         content = supportFragmentManager.getFragment(savedInstanceState, FRAGMENT_BUNDLE_KEY)
-        currentItemID = savedInstanceState.getInt(CURRENTLY_SELECTED_OPTION_BUNDLE_KEY)
     }
 
     private fun makeScreenInitialization(){

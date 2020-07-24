@@ -34,7 +34,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-black"
-                android:text="About Me"
+                android:text="@string/subtitle_about_me"
                 android:textColor="#000"
                 android:textSize="25sp"
                 app:layout_constraintStart_toStartOf="@+id/end_guidline"
@@ -55,7 +55,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:fontFamily="sans-serif-black"
-                android:text="Age"
+                android:text="@string/subtitle_age"
                 android:textColor="#000"
                 app:layout_constraintStart_toStartOf="@+id/end_guidline"
                 app:layout_constraintTop_toBottomOf="@+id/about_container" />
@@ -76,7 +76,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif-black"
-                android:text="Address"
+                android:text="@string/subtitle_address"
                 android:textColor="#000"
                 app:layout_constraintStart_toStartOf="@+id/end_guidline"
                 app:layout_constraintTop_toBottomOf="@+id/age_label" />
@@ -108,7 +108,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif-black"
-                android:text="Email"
+                android:text="@string/subtitle_email"
                 android:textColor="#000"
                 app:layout_constraintStart_toStartOf="@+id/end_guidline"
                 app:layout_constraintTop_toBottomOf="@+id/address_line2_container" />
@@ -130,7 +130,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif-black"
-                android:text="Phone"
+                android:text="@string/subtitle_phone"
                 android:textColor="#000"
                 app:layout_constraintStart_toStartOf="@+id/end_guidline"
                 app:layout_constraintTop_toBottomOf="@+id/email_container" />
@@ -151,7 +151,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:fontFamily="sans-serif-black"
-                android:text="DOB:"
+                android:text="@string/subtitle_dob"
                 android:textColor="#000"
                 app:layout_constraintBottom_toTopOf="@+id/bottom_guidline"
                 app:layout_constraintStart_toStartOf="@+id/end_guidline"

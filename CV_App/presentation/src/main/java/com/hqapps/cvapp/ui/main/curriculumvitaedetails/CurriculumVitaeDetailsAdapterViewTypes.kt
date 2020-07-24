@@ -44,3 +44,9 @@ class SkillViewType(
     val skill: Skill,
     val isLast: Boolean
 ) : ViewType(viewTypeID)
+
+class AdditionalInformationViewType(
+    viewTypeID: Int,
+    val additionalInformation: String,
+    val isLast: Boolean
+) : ViewType(viewTypeID)

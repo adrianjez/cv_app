@@ -8,10 +8,12 @@ import dagger.Binds
 import dagger.Module
 import dagger.android.support.AndroidSupportInjectionModule
 
-@Module(includes = [
-    AndroidSupportInjectionModule::class,
-    UiModule::class
-])
+@Module(
+    includes = [
+        AndroidSupportInjectionModule::class,
+        UiModule::class
+    ]
+)
 abstract class AppModule {
 
     @Binds
@@ -19,6 +21,5 @@ abstract class AppModule {
 
     @Binds
     internal abstract fun applicationContext(app: CVApplication): Context
-
 
 }
